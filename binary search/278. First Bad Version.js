@@ -2,19 +2,19 @@
 
 var solution = function (isBadVersion) {
   return function (n) {
-    let left = 1;
-    let right = n;
+    let start = 1;
+    let end = n;
 
-    while (left < right) {
-      const middle = Math.floor((left + right) / 2);
+    while (start < end) {
+      const middle = Math.floor((start + end) / 2);
 
       if (isBadVersion(middle)) {
-        right = middle;
+        end = middle;
       } else {
-        left = middle + 1;
+        start = middle + 1;
       }
     }
 
-    return left;
+    return start;
   };
 };
