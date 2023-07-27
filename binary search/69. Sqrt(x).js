@@ -12,6 +12,6 @@ var mySqrt = function (x) {
     if (mid ** 2 > x) end = mid;
   }
 
-  // if x == 0 or x == 1, the square root of x == x
+  // if x == 0 or x == 1, the square root of x is x itself
   return x < 2 ? x : end - 1;
 };
