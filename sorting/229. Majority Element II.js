@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/majority-element-ii/description/
 
-// counter object
+// Object Counter, time: O(n), space: O(n)
 var majorityElement = function (nums) {
   const count = {};
   const output = [];
@@ -18,4 +18,4 @@ var majorityElement = function (nums) {
   return output;
 };
 
-// Boyer-Moore Majority Vote Algorithm
+// Boyer-Moore Majority Vote Algorithm, time: O(n), space: O(1)
