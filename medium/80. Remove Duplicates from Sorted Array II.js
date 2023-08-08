@@ -4,7 +4,7 @@
 var removeDuplicates = function (nums) {
   if (nums.length === 0) return 0;
   let index = 1;
-  let twice = false; // to record if the number has appear twice already
+  let twice = false; // to record if the number has appeared twice already
 
   for (let i = 1; i < nums.length; i++) {
     // when reaches the intersection of distinct numbers

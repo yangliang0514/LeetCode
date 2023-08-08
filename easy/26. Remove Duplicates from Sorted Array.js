@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
+// time: O(n), space: O(1)
 var removeDuplicates = function (nums) {
   if (nums.length === 0) return 0;
 
