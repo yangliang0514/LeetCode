@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/majority-element/description/
 
-// Object Counter, time: O(n), space: O(n)
+// hash map, time: O(n), space: O(n)
 var majorityElement = function (nums) {
   const count = {};
 

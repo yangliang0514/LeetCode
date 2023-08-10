@@ -15,7 +15,7 @@ var lengthOfLongestSubstring = function (s) {
     }
 
     letters[s[i]] = i; // store the current letter and its index
-    length < i - start + 1 ? (length = i - start + 1) : null; // update the length if the new length is larger
+    length = Math.max(i - start + 1, length); // update the length if the new length is larger
   }
 
   return length;
