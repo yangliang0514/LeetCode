@@ -26,7 +26,7 @@ var maxProfit = function (prices) {
       continue;
     }
     // current price - minimum price is the current largest profit possible
-    // update the maxProfit if the current profit is larget
+    // update the maxProfit if the current profit is larger
     maxProfit = Math.max(profit, prices[i] - minPrice);
   }
   return maxProfit;
