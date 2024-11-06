@@ -12,7 +12,7 @@ var fizzBuzz = function (n) {
     if (i % 3 === 0) str += "Fizz";
     if (i % 5 === 0) str += "Buzz";
     // push i if it doesn't match any of the previous conditions
-    results.push(str);
+    results.push(str || i.toString());
   }
 
   return results;
@@ -33,4 +33,27 @@ var fizzBuzz = function (n, count = 1, result = []) {
   result.push(str || count.toString());
 
   return fizzBuzz(n, count + 1, result);
+};
+
+// use mapping, more extensible but maybe less efficient
+// time: O(n), space: O(n)
+var fizzBuzz = function (n) {
+  let mapping = [
+    [3, "Fizz"],
+    [5, "Buzz"],
+  ];
+
+  let result = [];
+
+  for (let i = 1; i <= n; i++) {
+    let str = "";
+
+    for (const [key, value] of mapping) {
+      if (i % key === 0) str += value;
+    }
+
+    result.push(str || i.toString());
+  }
+
+  return result;
 };
